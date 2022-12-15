@@ -1,5 +1,5 @@
 ---
-const { postUrl, post, blocks } = Astro.props;
+const { postUrl, post } = Astro.props;
 const pathname = new URL(Astro.url.pathname, "http://localhost:3001");
 const [endpoint] = new URL(postUrl).pathname
   .split("/")
@@ -7,22 +7,8 @@ const [endpoint] = new URL(postUrl).pathname
 ---
 
 <a class="link" href={`${pathname}/${endpoint}`}>
-  <div class="preview-wrapper">
+  <div class="flex items-center justify-between p-7 border-t-black">
     <p class="title">{post.properties.title}</p>
-    <p class="date">{post.date.created}</p>
+    <p class="min-w-[10ch]">{post.date.created}</p>
   </div>
 </a>
-
-<style lang="scss">
-  .preview-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: var(--size-6) 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.2);
-    .date {
-      min-width: 10ch;
-    }
-  }
-</style>

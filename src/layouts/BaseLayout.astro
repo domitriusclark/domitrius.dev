@@ -7,36 +7,11 @@ import Footer from "@components/Footer.astro";
 <!DOCTYPE html>
 <html lang="en">
   <BaseHead />
-  <body>
+  <body class="flex flex-col grow p-3 bg-white w-[72vw]">
     <Nav />
-    <div class="content">
+    <div class="flex-1">
       <slot />
     </div>
     <Footer />
-    <style lang="scss">
-      body {
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-        padding: var(--size-fluid-2);
-        background-color: white;
-        width: 72vw;
-        .content {
-          flex: 1 0 0%;
-        }
-        :global(a) {
-          transition: color 0.2s linear;
-          &:hover {
-            color: #b8860b;
-          }
-        }
-      }
-      @media (max-width: 768px) {
-        body {
-          width: 100%;
-          padding: var(--size-fluid-4);
-        }
-      }
-    </style>
   </body>
 </html>
