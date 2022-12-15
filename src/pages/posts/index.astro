@@ -10,8 +10,8 @@ const sortedPosts = data.sort(
 ---
 
 <BaseLayout>
-  <div class="posts">
-    <h1>Posts</h1>
+  <div class="flex flex-col">
+    <h1 class="text-lg my-0 mx-2">Posts</h1>
     <div>
       {
         sortedPosts.map((post) => (
@@ -21,14 +21,3 @@ const sortedPosts = data.sort(
     </div>
   </div>
 </BaseLayout>
-
-<style lang="scss">
-  .posts {
-    display: flex;
-    flex-direction: column;
-    h1 {
-      font-size: var(--size-6);
-      margin: var(--size-2) 0;
-    }
-  }
-</style>

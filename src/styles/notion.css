@@ -14,10 +14,10 @@
   padding: var(--size-4);
   margin: var(--size-4) 0;
   border-radius: 4px;
+}
 
-  .notion-callout-icon {
-    margin-right: var(--size-3);
-  }
+.notion-callout-wrapper .notion-callout-icon {
+  margin-right: var(--size-3);
 }
 
 .notion-blockquote {

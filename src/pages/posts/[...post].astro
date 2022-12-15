@@ -12,14 +12,8 @@ const { pages, pageData, blocks } = Astro.props;
 ---
 
 <PostLayout {pages} {pageData} {postUrl}>
-  <article>
+  <article class="prose">
     <PostHeader {pageData} />
     <Notion {blocks} />
   </article>
 </PostLayout>
-
-<style lang="scss">
-  article > * {
-    line-height: 1.625;
-  }
-</style>
