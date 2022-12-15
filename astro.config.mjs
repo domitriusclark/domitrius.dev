@@ -1,10 +1,25 @@
 import { defineConfig } from "astro/config";
 import { astroImageTools } from "astro-imagetools";
 
-import sitemap from "@astrojs/sitemap";
-
 // https://astro.build/config
 export default defineConfig({
-  site: "https://example.com",
-  integrations: [astroImagetools, sitemap()],
+  publicDir: "./public",
+  outDir: "./dist",
+  vite: {
+    plugins: [
+      {
+        name: "import.meta.url-transformer",
+        transform: (code, id) => {
+          if (id.endsWith(".astro"))
+            return code.replace(/import.meta.url/g, `"${id}"`);
+        },
+      },
+    ],
+    ssr: {
+      external: ["svgo"],
+    },
+  },
+  experimental: { integrations: true },
+  integrations: [astroImageTools],
+  server: { port: 3001 },
 });

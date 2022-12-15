@@ -16,6 +16,10 @@
     "@jcha0713/astro-notion": "^0.1.3",
     "@notionhq/client": "^2.2.2",
     "astro": "^1.6.15",
+    "astro-icon": "^0.8.0",
     "astro-imagetools": "^0.6.17"
+  },
+  "devDependencies": {
+    "sass": "^1.56.2"
   }
 }
