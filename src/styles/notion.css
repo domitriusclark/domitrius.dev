@@ -1,95 +1,71 @@
 .notion-divider {
-  color: rgba(0, 0, 0, 0.2);
-  margin: var(--size-2) 0;
+  @apply bg-gray-700 mx-2;
 }
 
 .notion-li {
-  padding: var(--size-1);
+  @apply p-1;
 }
 
 .notion-callout-wrapper {
-  display: flex;
-  flex-direction: row;
-  background-color: antiquewhite;
-  padding: var(--size-4);
-  margin: var(--size-4) 0;
-  border-radius: 4px;
+  @apply flex bg-[antiquewhite] p-4 my-4 rounded-md;
 }
 
 .notion-callout-wrapper .notion-callout-icon {
-  margin-right: var(--size-3);
+  @apply mr-4;
 }
 
 .notion-blockquote {
-  background-color: #eee;
-  font-style: italic;
-  padding: var(--size-4);
-  white-space: pre-line;
+  @apply bg-gray-700 p-4 my-4 rounded-md whitespace-pre-line;
 }
 
 .notion-toggle-wrapper {
-  margin: var(--size-4) 0;
-  background-color: #f9f9f9;
-  padding: var(--size-2);
-  border-radius: 4px;
-  cursor: pointer;
+  @apply bg-gray-700 p-4 my-4 rounded-md cursor-pointer;
 }
 
 .notion-toggle-wrapper[open] summary {
-  margin-bottom: var(--size-4);
+  @apply mb-4;
 }
 
 .notion-h1,
 .notion-h2,
 .notion-h3 {
-  margin: var(--size-6) 0 var(--size-3) 0;
-  font-weight: 600;
+  @apply font-bold mt-8 mb-4;
 }
 
 .notion-h1 {
-  font-size: var(--size-7);
+  @apply text-3xl;
 }
 
 .notion-h2 {
-  font-size: var(--size-6);
+  @apply text-2xl;
 }
 
 .notion-h3 {
-  font-size: var(--size-4);
+  @apply text-xl;
 }
 
 .notion-p {
-  margin: var(--size-1) 0;
+  @apply my-4;
 }
 
 .notion-inline-code {
-  background-color: gainsboro;
-  padding: var(--size-1) var(--size-2);
-  border-radius: 4px;
-  font-size: 0.8em;
+  @apply bg-gray-700 text-red-500 p-1 rounded-md text-sm;
 }
 
 .notion-image-wrapper {
-  max-width: fit-content;
-  margin: var(--size-4) 0;
+  @apply max-w-fit rounded-lg;
 }
 
 .astro-code,
 .notion-pre {
+  @apply whitespace-pre-wrap break-words p-6 text-sm rounded-md;
   font-family: var(--font-mono);
-  white-space: pre-wrap;
-  word-break: break-word;
-  margin: var(--size-4) 0;
-  padding: var(--size-6) var(--size-4);
-  font-size: 0.8em;
-  border-radius: var(--size-2);
 }
 
 .notion-iframe {
-  width: 100%;
-  height: 500px;
+  @apply w-full h-[500px];
 }
 
 .notion-link {
-  text-decoration: underline;
+  @apply underline;
 }

@@ -16,5 +16,5 @@ a {
 }
 
 a:hover {
-  color: #b8860b;
+  @apply text-purple-600;
 }
